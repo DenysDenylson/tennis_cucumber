@@ -1,9 +1,14 @@
 class Tennis
+	
+	def initialize
+		@marcador = "0 - 0"
+	end
+	
 	def scorer
-		"0 - 0"
+		@marcador
 	end
 	
 	def jugador1_anota
-		"15 - 0"
+		@marcador = "15 - 0"
 	end
 end
