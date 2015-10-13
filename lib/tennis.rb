@@ -9,6 +9,12 @@ class Tennis
 	end
 	
 	def jugador1_anota
-		@marcador = "15 - 0"
+		if @marcador == "0 - 0"
+			@marcador = "15 - 0"
+		elsif @marcador == "15 - 0"
+			@marcador = "30 - 0"
+		end
 	end
+	
+	
 end
