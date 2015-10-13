@@ -16,5 +16,9 @@ class Tennis
 		end
 	end
 	
+	def jugador2_anota
+		@marcador = "0 - 15"
+	end
+	
 	
 end
