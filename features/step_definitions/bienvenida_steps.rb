@@ -1,3 +1,7 @@
+require './lib/tennis'
+
+$obj = Tennis.new
+
 Given(/^estoy en la pagina de inicio$/) do
   visit '/'
 end
@@ -7,23 +11,9 @@ When(/^presiono el boton "([^"]*)"$/) do |boton|
 end
 
 Then(/^Deberia ver "([^"]*)"$/) do |texto|
-  expect(last_response.body).to eq(texto)
+  # obj = Tennis.new
+  $obj.scorer == texto
+  # last_response.body.should =~ /#{obj.scorer}/m
+  # last_response.body.should =~ /#{texto}/m
 end
 
-
-#
-#
-#
-# Given(/^Estoy en la pagina de inicio$/) do
-#   visit '/'
-# end
-#
-# Then(/^Deberia ver "([^"]*)"$/) do |texto|
-#   expect(last_response.body).to eq(texto)
-# end
-#
-# When(/^Hago presiono el boton "([^"]*)"$/) do |boton|
-#   click_button(boton)
-# end
-#
-#

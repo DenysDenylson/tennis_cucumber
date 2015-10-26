@@ -1,9 +1,18 @@
 require 'sinatra'
+require './lib/tennis'
+
+
+$obj = Tennis.new
 
 get '/' do
 	erb :index
 end
 
-post '/juego' do
-	"scores 0 - 0"
+get '/juego' do
+	erb :juego
+end
+
+post '/jugador1_anota' do
+  $obj.jugador1_anota
+  erb :juego
 end
