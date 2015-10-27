@@ -5,6 +5,12 @@ class Tennis
 		@marcador_jugador1 = "0"
 		@marcador_jugador2 = "0"
 	end
+
+  def reiniciar
+		@marcador = "0 - 0"
+		@marcador_jugador1 = "0"
+		@marcador_jugador2 = "0"
+	end
 	
 	def scorer
 		es_deuce?
@@ -20,8 +26,8 @@ class Tennis
 			@marcador = "30 - #{@marcador_jugador2}"
 		elsif @marcador == "30 - #{@marcador_jugador2}"	
 			@marcador_jugador1 = "40"							
-			@marcador = "40 - 0"
-		elsif @marcador == "40 - 0"
+			@marcador = "40 - #{@marcador_jugador2}"
+		elsif @marcador == "40 - #{@marcador_jugador2}"
 			@marcador = "Ganaste jugador1"
 		elsif @marcador == "deuce"
 			@marcador = "advantage1"
@@ -40,7 +46,7 @@ class Tennis
 		elsif @marcador == "#{@marcador_jugador1} - 30"
 			@marcador_jugador2 = "40"				
 			@marcador = "#{@marcador_jugador1} - 40"
-		elsif @marcador == "0 - 40"
+		elsif @marcador == "#{@marcador_jugador1} - 40"
 			@marcador = "Ganaste jugador2"
 		elsif @marcador == "deuce"
 			@marcador = "advantage2"

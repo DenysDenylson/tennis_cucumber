@@ -9,6 +9,7 @@ get '/' do
 end
 
 get '/juego' do
+  $obj.reiniciar
 	erb :juego
 end
 

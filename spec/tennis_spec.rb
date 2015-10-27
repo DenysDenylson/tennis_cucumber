@@ -124,7 +124,7 @@ describe Tennis do
 			expect(@tennis.scorer).to eq "Ganaste jugador1"							
 		end	
 		
-		it "jugador1 esta con advantage y marca para ganar, el score esta 'Ganaste jugador1'" do
+		it "jugador2 esta con advantage y marca para ganar, el score esta 'Ganaste jugador2'" do
 			@tennis.jugador1_anota
 			@tennis.jugador1_anota
 			@tennis.jugador1_anota

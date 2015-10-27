@@ -1,4 +1,4 @@
-Feature: Pagina del Juego
+Feature: Anotaciones de Jugador1 y Jugador2, indivuales
 
   Scenario Outline: Anota jugador 1
     Given estoy en la pagina del juego
@@ -11,10 +11,18 @@ Feature: Pagina del Juego
       | anotar jugador 1 | scores 40 - 0 |
       | anotar jugador 1 | Ganaste jugador1 |
 
-  Scenario: Anota jugador 2
+  Scenario Outline: Anota jugador 2
     Given estoy en la pagina del juego
-    When clickeo el boton "anotar jugador 2"
-    Then veo "scores 0 - 15"
+    When clickeo el boton "<boton>"
+    Then veo "<texto>"
+    Examples:
+      | boton            | texto         |
+      | anotar jugador 2 | scores 0 - 15 |
+      | anotar jugador 2 | scores 0 - 30 |
+      | anotar jugador 2 | scores 0 - 40 |
+      | anotar jugador 2 | Ganaste jugador2 |
+
+
   
 
 #  REFACTORIZACION DE ESCENARIOS DE JUGADOR1
@@ -34,4 +42,22 @@ Feature: Pagina del Juego
 #    When hago click en el boton "anotar jugador 1"
 #    Then deberia ver "Ganaste jugador1"
 
-    
+#  REFACTORIZACION DE ESCENARIOS DE JUGADOR1
+#  ==========================================
+#
+#  Scenario: Anota jugador 2 por segunda vez
+#    Given estoy en la pagina del juego
+#    When clickeo el boton "anotar jugador 2"
+#    Then veo "scores 0 - 30"
+#
+#  Scenario: Anota jugador 2 por tercera vez
+#    Given estoy en la pagina del juego
+#    When clickeo el boton "anotar jugador 2"
+#    Then veo "scores 0 - 40"
+#
+#  Scenario: Anota jugador 2 por segunda vez y gana
+#    Given estoy en la pagina del juego
+#    When clickeo el boton "anotar jugador 2"
+#    Then veo "Ganaste jugador2"
+#
+#
