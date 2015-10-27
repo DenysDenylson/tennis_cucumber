@@ -22,3 +22,8 @@ post '/jugador2_anota' do
   $obj.jugador2_anota
   erb :juego
 end
+
+post '/reiniciar' do
+  $obj.reiniciar
+  erb :juego
+end

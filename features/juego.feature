@@ -22,6 +22,11 @@ Feature: Anotaciones de Jugador1 y Jugador2, indivuales
       | anotar jugador 2 | scores 0 - 40 |
       | anotar jugador 2 | Ganaste jugador2 |
 
+  Scenario: Se reinicia el juego
+    Given estoy en la pagina del juego
+    When hago click en el boton "reiniciar"
+    Then deberia ver "scores 0 - 0"
+
 
   
 
