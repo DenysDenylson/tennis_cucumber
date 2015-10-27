@@ -16,3 +16,8 @@ post '/jugador1_anota' do
   $obj.jugador1_anota
   erb :juego
 end
+
+post '/jugador2_anota' do
+  $obj.jugador2_anota
+  erb :juego
+end

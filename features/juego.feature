@@ -11,7 +11,10 @@ Feature: Pagina del Juego
       | anotar jugador 1 | scores 40 - 0 |
       | anotar jugador 1 | Ganaste jugador1 |
 
-
+  Scenario: Anota jugador 2
+    Given estoy en la pagina del juego
+    When clickeo el boton "anotar jugador 2"
+    Then veo "scores 0 - 15"
   
 
 #  REFACTORIZACION DE ESCENARIOS DE JUGADOR1
