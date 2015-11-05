@@ -1,5 +1,7 @@
 language: ruby
 rvm:
-:2.1.7
-os:
-- windows
+- 2.0.0-p247
+
+script: 
+	- bundle exec rspec
+	- bundle exec cucumber
