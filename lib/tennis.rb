@@ -1,5 +1,5 @@
 class Tennis
-	
+	# 
 	def initialize
 		@marcador = "0 - 0"
 		@marcador_jugador1 = "0"
